@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--JQuery Ref-->
+        <script type="text/javascript" src="./jquery-3.5.1.js"></script>
+
+        <!--google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300;1,500;1,600&display=swap" rel="stylesheet"> 
+
+        <!--font awesome-->
+        <script src="https://kit.fontawesome.com/d165a2430c.js" crossorigin="anonymous"></script>
+
+        <!--Custom Style Sheet - CSS-->
+        <link rel="stylesheet" href="crstyle.css">
+        <title>Brute Coded</title>
+
+        <!--Jquery script to scroll to view next project-->
+
+    </head>
+
+    <body>
+        <!--main container for website-->
+        <div class="grid-container">
+            <!--NAVIGATION-->
+            <div class="grid-nav">
+                <div class="fullnav">   
+                    <h4>selected works</h4> 
+                    <h4>on the boards</h4>
+                    <h4>process</h4>
+                    <h4>about</h4>
+                </div>
+                <div class="nav-footer">
+                    <i class="fas fa-adjust"></i>
+                </div>
+            </div>
+            <!--                       -->
+            <!--rest of website content-->
+            <div class="grid-content">
+                <!--
+                <div class="proj-flex-parent">
+                    <!--project image list-->
+                    <div id="projimgarray">
+                        <div class="main-proj">
+                            <div class="topclick"></div>
+                            <div class="bottomclick"></div>
+                            <div class="leftclick"></div>
+                            <div class="rightclick"></div>
+                            <imG class="main-proj-img" src="https://picsum.photos/800/600">
+                            <!--No longer needed<a href="javascript:void(0)"><i class="fas fa-chevron-down" style="position:absolute; bottom:5%; left:50%;"></i></a>
+                            -->
+                        </div>
+                        
+                        <div class="main-proj">
+                            <div class="topclick"></div>
+                            <div class="bottomclick"></div>
+                            <div class="leftclick"></div>
+                            <div class="rightclick"></div>
+                            <img class="main-proj-img" src="https://picsum.photos/801/600">
+                        </div>
+
+                        <div class="main-proj">
+                            <div class="topclick"></div>
+                            <div class="bottomclick"></div>
+                            <div class="leftclick"></div>
+                            <div class="rightclick"></div>
+                            <img class="main-proj-img" src="https://picsum.photos/798/600">
+                        </div>
+                        <div class="main-proj">
+                            <div class="topclick"></div>
+                            <div class="bottomclick"></div>
+                            <div class="leftclick"></div>
+                            <div class="rightclick"></div>
+                            <img class="main-proj-img" src="https://picsum.photos/799/600">
+                        </div>
+                        <div class="main-proj">
+                            <div class="topclick"></div>
+                            <div class="bottomclick"></div>
+                            <div class="leftclick"></div>
+                            <div class="rightclick"></div>
+                            <img class="main-proj-img" src="https://picsum.photos/802/600">
+                        </div>
+                        <div id="bottom" class="main-proj">
+                            <div class="topclick"></div>
+                            <div class="bottomclick"></div>
+                            <div class="leftclick"></div>
+                            <div class="rightclick"></div>
+                            <img class="main-proj-img" src="https://picsum.photos/803/600">
+                        </div>
+
+                    </div> 
+                    <!--
+                </div>      
+            -->
+            </div>    
+        </div>  
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+        
+        
+        <script type="text/javascript">
+            $("document").ready(function() {
+                //Test Jquery loaded properly.....Jquery was loaded properly
+
+                //
+                $(".bottomclick").click(function() {
+                    console.log("Scroll jquery is working");
+                    $( this ).parent().addClass("activeproj");
+                    let $target = $(".activeproj").next(".main-proj");
+                    if ($target.length == 0 ) 
+                        $target = $(".main-proj:first"); 
+                    
+                    //Question: Why is document.documentElemeent.... needed vs just a more concise reference? like div or some other identifier?
+                    $([document.documentElement, document.body]).animate({
+                    scrollTop: $($target).offset().top
+                    }, 2000);
+                    
+                    $('.activeproj').removeClass('activeproj');
+                
+                });
+            });
+        </script>
+    </body>
+</html>
