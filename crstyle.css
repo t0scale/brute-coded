@@ -62,7 +62,7 @@ a, a:hover {
     left: 0%;
     height: 25vh;
     width: 100%;
-    cursor: n-resize;
+    cursor: url(./chevup_blk.png), auto;
 }
 .bottomclick, .bottomclick:hover {
     position: absolute;
@@ -70,7 +70,7 @@ a, a:hover {
     left: 0%;
     height: 25vh;
     width: 100%;
-    cursor: s-resize;
+    cursor: url(./chevdn_blk.png), auto;
 }
 .rightclick, .rightclick:hover {
     position: absolute;
@@ -78,7 +78,7 @@ a, a:hover {
     right: 0%;
     height: 50vh;
     width: 30%;
-    cursor: e-resize;
+    cursor: url(./chevrt_blk.png), auto;
 }
 .leftclick, .leftclick:hover {
     position: absolute;
@@ -86,5 +86,5 @@ a, a:hover {
     left: 0%;
     height: 50vh;
     width: 30%;
-    cursor: w-resize;
+    cursor: url(./chevlf_blk.png), auto;
 }
