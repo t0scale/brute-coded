@@ -1,51 +1,66 @@
 * {
     font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: 0;
-    background-color: hsl(0, 0%, 88%);
     scroll-behavior: smooth;
 }
+body {
+    background-color: hsl(0, 0%, 88%);
+}
 h4 {
-    font-weight: 300;
     font-size: 1.1em;
+}
+h5 {
+    font-size: .85em;
 }
 a, a:hover {
     text-decoration: none;
     color: black;
 }
 /*CSS GRID SETUP*/
-.grid-container {
+.grid-home-container {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 33% 33% 33%;
-    grid-gap: 0px;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 33% 33% 33%; 
+    grid-gap: 0px;    
+    width: 100vw;
+    height: 100vh;
 }
+/*NAVIGATION*/
 .grid-nav {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 6;
-    margin: 0px 0px;
-    padding: 250px 0px;
-}
-.grid-content {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 1;
     grid-row-end: 4;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    position: fixed;
 }
-.fullnav {
-    position: sticky;
-    position: -webkit-sticky;
-    top:50px;
+.mainnav {
+    position: relative;
+    top:80px;
     margin-left: 23px;
 }
-.nav-footer {
+.navitem {
+    list-style: none;
+}
+.footernav {
     margin-left: 23px;
     position: fixed;
     bottom: 23px;
 }
-.main-proj {
+/*HOME PAGE CONTENT*/
+.grid-home-content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    
+}
+.sel-work {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -56,35 +71,43 @@ a, a:hover {
     left: 50%;
     transform: translate( -50%, -50%);
 }
+/*CLICK AREA*/
+.grid-click-area {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 25%;
+}
 .topclick, .topclick:hover {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 25vh;
+    top: 0;
+    height: 25%;
     width: 100%;
     cursor: url(./chevup_blk.png), auto;
+    
 }
 .bottomclick, .bottomclick:hover {
     position: absolute;
-    bottom: 0%;
-    left: 0%;
-    height: 25vh;
+    bottom: 0;
+    height: 25%;
+    height: 50%;
     width: 100%;
     cursor: url(./chevdn_blk.png), auto;
+    
 }
-.rightclick, .rightclick:hover {
-    position: absolute;
-    top: 25%;
-    right: 0%;
-    height: 50vh;
-    width: 30%;
-    cursor: url(./chevrt_blk.png), auto;
+
+#map {
+    height: 400px;
+    width: 750px;
 }
-.leftclick, .leftclick:hover {
-    position: absolute;
-    top: 25%;
-    left: 0%;
-    height: 50vh;
-    width: 30%;
-    cursor: url(./chevlf_blk.png), auto;
+/*clean up google maps content*/
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
 }
