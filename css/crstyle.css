@@ -8,6 +8,10 @@
 body {
     background-color: rgb(220, 224, 226);
 }
+h1 {
+    font-size: 4.0em;
+    text-transform: capitalize;
+}
 h4 {
     font-size: 1.1em;
 }
@@ -76,7 +80,7 @@ a, a:hover {
 }
 /*CLICK AREA*/
 .topclick, .topclick:hover {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 25%;
     height: 25%;
@@ -85,7 +89,7 @@ a, a:hover {
     
 }
 .bottomclick, .bottomclick:hover {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 25%;
     height: 25%;
