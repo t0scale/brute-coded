@@ -84,7 +84,7 @@ a, a:hover {
     top: 0;
     height: 25%;
     width: 100%;
-    cursor: url(./chevup_blk.png), auto;
+    cursor: url(../common/cursor/chevup_blk.png), auto;
     
 }
 .bottomclick, .bottomclick:hover {
@@ -93,7 +93,7 @@ a, a:hover {
     height: 25%;
     height: 50%;
     width: 100%;
-    cursor: url(./chevdn_blk.png), auto;
+    cursor: url(../common/cursor/chevdn_blk.png), auto;
     
 }
 
