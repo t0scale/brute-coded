@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: hsl(0, 0%, 88%);
+    background-color: rgb(220, 224, 226);
 }
 h4 {
     font-size: 1.1em;

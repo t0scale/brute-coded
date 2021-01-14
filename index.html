@@ -21,16 +21,7 @@
         <div class="grid-home-container">
 
             <!--navigation-->
-            <div class="grid-nav">
-                <ul class="mainnav">   
-                    <li class="navitem"><a href="#"><h4>selected works</h4></a></li>
-                    <li class="navitem"><a href="./process.html"><h4>process</h4></a></li>
-                    <li class="navitem"><a href="./office.html"><h4>office</h4></a></li>
-                </ul>
-                <div class="footernav">
-                    <i class="fas fa-adjust"></i>
-                </div>
-            </div>
+            <div id="nav_container" class="grid-nav"></div>
 
             <!--the home page content area-->
             <div class="grid-home-content">
@@ -55,5 +46,8 @@
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
         <script type="text/javascript" src="./js/scrollscript.js"></script>
+        <script>
+            $("#nav_container").load("./common/nav.html");
+        </script>
     </body>
 </html>
