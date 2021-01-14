@@ -9,7 +9,7 @@ $("document").ready(function() {
         //Question: Why is document.documentElemeent.... needed vs just a more concise reference? like div or some other identifier?
         $([document.documentElement, document.body]).animate({
         scrollTop: $($target).offset().top
-        }, 1200);
+        }, 450);
         
         $('.activeproj').removeClass('activeproj');
         $target.addClass('activeproj');
@@ -21,7 +21,7 @@ $("document").ready(function() {
 
         $([document.documentElement, document.body]).animate({
         scrollTop: $($target).offset().top
-        }, 800);
+        }, 450);
         
         $('.activeproj').removeClass('activeproj');
         $target.addClass('activeproj');
