@@ -58,6 +58,9 @@ a, a:hover {
     grid-row-end: 4;
     margin: 0px 0px;
     padding: 0px 0px;
+    position: relative;
+    left: 0px;
+
     
 }
 .sel-work {
@@ -72,26 +75,21 @@ a, a:hover {
     transform: translate( -50%, -50%);
 }
 /*CLICK AREA*/
-.grid-click-area {
-    position: fixed;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 25%;
-}
 .topclick, .topclick:hover {
     position: absolute;
     top: 0;
+    left: 25%;
     height: 25%;
-    width: 100%;
+    width: 50%;
     cursor: url(../common/cursor/chevup_blk.png), auto;
     
 }
 .bottomclick, .bottomclick:hover {
     position: absolute;
     bottom: 0;
+    left: 25%;
     height: 25%;
-    width: 100%;
+    width: 50%;
     cursor: url(../common/cursor/chevdn_blk.png), auto;
     
 }
