@@ -7,9 +7,9 @@ $(document).ready(function($) {
     $('.accordion > dt > a ').click(function() {
         var $this = $(this);
         //slide up all panels that might be open
-        panels.slideUp();
+        //panels.slideUp();
         //slide down the selected panel
-        $this.parent().next().slideDown();
+        $this.parent().next().slideToggle();
 
         return false;
     })
